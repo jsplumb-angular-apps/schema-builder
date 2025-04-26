@@ -1,0 +1,39 @@
+
+<div class="jtk-demo-main" id="jtk-demo-flowchart">
+
+  <!-- main drawing area -->
+  <div class="jtk-demo-canvas">
+
+    <jsplumb-surface [view]="view"
+                     [renderParams]="renderParams"
+                      [toolkitParams]="toolkitParams">
+
+    </jsplumb-surface>
+
+    <!--
+        Provides undo/redo, zoom to fit, etc.
+    -->
+    <jsplumb-controls/>
+
+    <!-- miniview -->
+    <jsplumb-miniview/>
+  </div>
+  <div class="jtk-demo-rhs">
+    <!-- the node palette -->
+    <div class="sidebar node-palette" jsplumb-surface-drop>
+      <div data-jtk-type="table" data-jtk-name="New Table" class="jtk-schema-palette-item">Table</div>
+      <div data-jtk-type="view" data-jtk-name="New View" class="jtk-schema-palette-item">View</div>
+    </div>
+    <!-- node/edge inspector -->
+    <app-inspector/>
+
+    <div class="description">
+      <p>
+        This sample application is a builder for database schemas.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
